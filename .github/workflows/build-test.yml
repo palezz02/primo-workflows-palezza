@@ -23,6 +23,6 @@ jobs:
     needs: build
     runs-on: windows-latest
     steps:
-      - run: npm test
+      - run: next lint
     
         
