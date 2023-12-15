@@ -23,6 +23,12 @@ jobs:
     needs: build
     runs-on: windows-latest
     steps:
-      - run: next lint
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with: 
+          node-version: 18.x
+      - run: npm run test
     
         
