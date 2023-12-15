@@ -19,4 +19,10 @@ jobs:
           node-version: 18.x
       - run: npm install
       - run: npm run build
+  test:
+    needs: build
+    runs-on: windows-latest
+    steps:
+      - run: npm run test
+    
         
